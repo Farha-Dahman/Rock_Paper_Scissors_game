@@ -17,13 +17,13 @@ Your users should be able to:
 ### Rule
 according to rules of each game, of the player wins, they gain 1 point. If the computer wins, the player loses one point.
 
-#### First game:
+### First game:
 
 <li>Paper beats Rock</li>
 <li>Rock beats Scissors</li>
 <li>Scissors beats Paper</li>
 
-#### Second game:
+### Second game:
 
 <li>Scissors beats Paper</li>
 <li>Paper beats Rock</li>
@@ -35,3 +35,5 @@ according to rules of each game, of the player wins, they gain 1 point. If the c
 <li>Rock beats Scissors</li>
 <li>Lizard beats Paper</li>
 <li>Spock beats Rock</li>
+
+### Let's go to play this game👏🔥
