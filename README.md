@@ -13,3 +13,5 @@ Your users should be able to:
 - Play Rock, Paper, Scissors against the computer.
 - Maintain the state of the score after refreshing the browser.
 - Play Rock, Paper, Scissors, Lizard, Spock against the computer.
+
+###Rule
