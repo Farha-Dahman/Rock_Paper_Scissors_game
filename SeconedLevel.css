@@ -733,7 +733,34 @@ margin-top: 12px;
                 
                 
                   }
-
-
                 }
+                .soundbutton{
+    background-image: url("images/sound2.jpg");
+    background-position: center;
+    height: 90px;
+    width: 90px;
+    background-size: cover;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 9px rgb(39, 2, 63);
+    position: absolute;
+    right:    20px;
+    bottom:   22px;
+}
+.soundbutton2{
+    background-image: url("images/sound.jpg");
+    background-position: center;
+    height: 90px;
+    width: 90px;
+    background-size: cover;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 9px rgb(39, 2, 63);
+    position: absolute;
+    right:    20px;
+    bottom:   22px;
+}
+
     

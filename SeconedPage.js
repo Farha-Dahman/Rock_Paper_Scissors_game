@@ -47,8 +47,7 @@
             id("score").innerHTML = count;
             id("status").innerHTML = 'YOU WIN';
             //maintain[0].classList.toggle('');
-            id("user-img").style.boxShadow = "0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
-            id("user-img").style.zIndex = "-1";
+            Effect1();
         }
         if (result == 0) {
             id("status").innerHTML = 'DRAW';
@@ -57,8 +56,7 @@
             count -= 1;
             id("score").innerHTML = count;
             id("status").innerHTML = 'YOU LOSE';
-            id("pc-img").style.boxShadow = "0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
-            id("pc-img").style.zIndex = "-1";
+            Effect2();
         }
     }
 
@@ -125,6 +123,7 @@
         Prev.style.display = "none";
         //show the main maintain
         maintain.style.display = 'flex';
+        soundbutton.style.display = "none";
 
     };
 
@@ -182,8 +181,42 @@
         Prev.style.display = "block";
         id("user-img").style.boxShadow = "";
         id("pc-img").style.boxShadow = "";
-    })
+        soundbutton.style.display = "flex";
 
+    })
+       /**
+* Music Button 
+* Ahmad Amer
+*/
+var music = new Audio();
+let soundbutton = qs("#Play");
+var Play = document.getElementById("Play");
+music.src = 'music.mp3';
+music.loop = true;
+Play.addEventListener('click', fplay);
+function fplay() {
+    soundbutton.classList.toggle("soundbutton2");
+    if (music.paused) {
+        music.play();
+    }
+    else {
+        music.pause();
+    }
+}
+/*
+show Effects on the winning photo
+Raghad Khatatba
+*/
+let Effect1 = ()=>{
+    id("user-img").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
+    id("user-img").style.zIndex="-1";
+    id("pc-img").style.zIndex="1";
+}
+let Effect2 = ()=>{
+    id("pc-img").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
+    id("pc-img").style.zIndex="-1";
+    id("user-img").style.zIndex="1";
+}
     /* --- TP1 HELPER FUNCTIONS --- */
 
     /**

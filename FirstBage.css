@@ -2,7 +2,6 @@
  *Rock Paper Scissors game !
  * Provides styles to the Rock Paper Scissors game.
  */
-
  body {
     background-image: url("images/backGround.jpg") ;
     background-size: cover;
@@ -58,6 +57,7 @@ button:hover{
     flex-flow: row wrap;
     align-items: center;
 }
+
 .soundbutton{
     background-image: url("images/sound2.jpg");
     background-position: center;
@@ -86,6 +86,7 @@ button:hover{
     right:    20px;
     bottom:   22px;
 }
+
 /* For small devices (phones, 600px and down) */
 @media only screen and (max-device-width: 600px) {
     .but {
@@ -95,8 +96,8 @@ button:hover{
       margin: 9%;
     }
     .soundbutton{
-        min-height: 140px;
-        min-width: 140px;
+        min-height: 100px;
+        min-width: 100px;
         bottom:   40px;
     }
     #title-of-game{
@@ -106,3 +107,92 @@ button:hover{
         margin-top: 12%;
     }
   }
+/* responsive in all devices */
+  @media (max-width:768px) {
+    .but {
+      
+        min-height: 180px;
+        min-width: 410px;
+        margin: 4%;
+      }
+           #title-of-game{
+        margin-top: 7%;
+    }
+  }
+  @media (width:320px){
+    #container .but1,.but2,.but3{
+        min-height: 60px;
+        min-width: 200px;
+        margin-bottom: 4%;
+      }
+    #title-of-game{
+        margin-top: 5%;
+        font-size: 40px;
+    }
+    #firstbutton{
+        margin-top: 8%;
+    }
+    .soundbutton{
+        height: 55px;
+        width: 55px;
+        bottom:   18px;
+    }
+  }
+  @media (width:375px){
+    #container .but1,.but2,.but3{
+        min-height: 60px;
+        min-width: 200px;
+        margin-bottom: 4%;
+      }
+      #title-of-game{
+        margin-top: 5%;
+        font-size: 40px;
+    }
+    #firstbutton{
+        margin-top: 8%;
+    }
+    .soundbutton{
+        height: 70px;
+        width: 70px;
+        bottom:   18px;
+    }
+  }
+  @media (width:425px){
+    #container .but1,.but2,.but3{
+        min-height: 60px;
+        min-width: 200px;
+        margin-bottom: 4%;
+      }
+      #title-of-game{
+        margin-top: 5%;
+        font-size: 45px;
+    }
+    #firstbutton{
+        margin-top: 8%;
+    }
+    .soundbutton{
+        height: 80px;
+        width: 80px;
+        bottom:   18px;
+    }
+  }
+  @media (width:1024px){
+    #container .but1,.but2,.but3{
+        min-height: 90px;
+        min-width: 250px;
+        margin-bottom: 2%;
+      }
+      #title-of-game{
+        margin-top: 4%;
+        font-size: 60px;
+    }
+    #firstbutton{
+        margin-top: 0%;
+    }
+    .soundbutton{
+        min-height: 30px;
+        min-width: 30px;
+        bottom:   18px;
+    }
+  }
+ 

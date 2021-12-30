@@ -14,10 +14,10 @@
                 body.addEventListener("click", (eo) => {
                     switch (eo.target.className) {
                         //go to the Rules Page and game type page 
-                        case "but1": document.location.href = "Rules Page and game type page.html";
+                        case "but1": window.close(); window.open("Rules Page and game type page.html");
                             break;
                         //go to the Rules Page   
-                        case "but2": document.location.href = "Rules Page.html";
+                        case "but2": window.close(); window.open("Rules Page.html");
                             break;
                         //button to close the window   
                         case "but3":
@@ -54,14 +54,14 @@
                 //go back to the First Bage
                 let Prev = Id("Prev");
                 Prev.addEventListener("click", () => {
-                    document.location.href = "FirstBage.html";
+                    window.close(); window.open("FirstBage.html");
                 })
                 //go to the First Level
                 Id("FirstLevel").addEventListener("click", () => {
-                    document.location.href = "rock-paper-scissors.html";
+                    window.close(); window.open("rock-paper-scissors.html");
                 })
                 Id("seconedLevel").addEventListener("click", () => {
-                    document.location.href = "SeconedLevel.html";
+                    window.close(); window.open("SeconedLevel.html");
                 })
                 break;
             //page : Rules Page.html
@@ -71,15 +71,16 @@
                 let Rules2 = Id("Rules2");
                 //go to the rules of first level page
                 Rules1.addEventListener("click", () => {
-                    document.location.href = "rules1 page.html";
+                    window.close(); window.open("rules1 page.html");
                 })
                 //go to the rules of second level page
                 Rules2.addEventListener("click", () => {
-                    document.location.href = "rule2 pages.html";
+                    window.close(); window.open("rule2 pages.html");
                 })
                 //go to the First Level
                 Prev1.addEventListener("click", () => {
-                    document.location.href = "FirstBage.html";
+                    
+                    window.close(); window.open("FirstBage.html");
                 })
                 break;
             //page :rules1 page.html
@@ -87,15 +88,15 @@
                 let buttonX = Id("buttonX");
                 //go back to the Rules Page
                 buttonX.addEventListener("click", () => {
-                    document.location.href = "Rules Page.html";
+                    window.close(); window.open("Rules Page.html");
                 })
                 break;
-            //page :rules2 page.html
+               //page :rules2 page.html
             case "body5":
                 //go back to the Rules Page
                 let buttonX2 = Id("buttonX2");
                 buttonX2.addEventListener("click", () => {
-                    document.location.href = "Rules Page.html";
+                    window.close(); window.open("Rules Page.html");
                 })
                 break;
         }

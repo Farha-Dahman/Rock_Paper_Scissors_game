@@ -48,89 +48,80 @@
             document.location.href = "Rules Page and game type page.html";
         })
     }
-//Nama' Salameh     (all cases of the first game)
-//cases of rock's image
-function imagerock(computerimage){
-    //to change the score( convert the score to int )
-    let score = parseInt(Id("score").textContent);
-    //for draw
-    if(computerimage == "images/Rock-icon.png")
-    {
-        changeResult("DRAW ");
+    //Nama' Salameh     (all cases of the first game)
+    //cases of rock's image
+    function imagerock(computerimage) {
+        //to change the score( convert the score to int )
+        let score = parseInt(Id("score").textContent);
+        //for draw
+        if (computerimage == "images/Rock-icon.png") {
+            changeResult("DRAW ");
+        }
+        //for lose
+        if (computerimage == "images/Paper-icon.png") {
+            changeResult("YOU LOSE");
+            changeScore(score - 1);
+            Effect2();
+        }
+        //for win
+        if (computerimage == "images/Scissor-icon.png") {
+            changeResult("YOU WIN");
+            changeScore(score + 1);
+            Effect1();
+        }
+
     }
-    //for lose
-    if(computerimage == "images/Paper-icon.png")
-    {
-        changeResult("YOU LOSE");
-        changeScore(score-1);
-        Id("y").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
+    //cases of paper's image
+    function imagepaper(computerimage) {
+        //to change the score( convert the score to int )
+        let score = parseInt(Id("score").textContent);
+        //for draw
+        if (computerimage == "images/Paper-icon.png") {
+            changeResult("DRAW ");
+        }
+        //for lose
+        if (computerimage == "images/Scissor-icon.png") {
+            changeResult("YOU LOSE ");
+            changeScore(score - 1);
+            Effect2();
+        }
+        //for win
+        if (computerimage == "images/Rock-icon.png") {
+            changeResult("YOU WIN ");
+            changeScore(score + 1);
+            Effect1();
+        }
     }
-    //for win
-    if(computerimage == "images/Scissor-icon.png")
-    {
-        changeResult("YOU WIN");
-        changeScore(score+1);
-        Id("x").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
+    //cases of scissors's image
+    function imagescissors(computerimage) {
+        //to change the score( convert the score to int )
+        let score = parseInt(Id("score").textContent);
+        //for draw
+        if (computerimage == "images/Scissor-icon.png") {
+            changeResult("DRAW ");
+        }
+        //for lose
+        if (computerimage == "images/Rock-icon.png") {
+            changeResult("YOU LOSE ");
+            changeScore(score - 1);
+            Effect2();
+        }
+        //for win
+        if (computerimage == "images/Paper-icon.png") {
+            changeResult("YOU WIN ");
+            changeScore(score + 1);
+            Effect1();
+        }
     }
-    
-}
-//cases of paper's image
-function imagepaper(computerimage){
-    //to change the score( convert the score to int )
-    let score = parseInt(Id("score").textContent);
-    //for draw
-    if(computerimage == "images/Paper-icon.png")
-    {
-        changeResult("DRAW ");
+    //Change the  score
+    function changeScore(valueofscore) {
+        Id("score").textContent = valueofscore
     }
-    //for lose
-    if(computerimage == "images/Scissor-icon.png")
-    {
-        changeResult("YOU LOSE ");
-        changeScore(score-1);
-        Id("y").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
+    //Change the result
+    function changeResult(text) {
+        result.innerText = text;
     }
-    //for win
-    if(computerimage == "images/Rock-icon.png")
-    {
-        changeResult("YOU WIN ");
-        changeScore(score+1);
-        Id("x").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
-    }
-}
-//cases of scissors's image
-function imagescissors(computerimage){
-    //to change the score( convert the score to int )
-    let score = parseInt(Id("score").textContent);
-    //for draw
-    if(computerimage == "images/Scissor-icon.png")
-    {
-        changeResult("DRAW ");
-    }
-    //for lose
-    if(computerimage == "images/Rock-icon.png")
-    {
-        changeResult("YOU LOSE ");
-        changeScore(score-1);
-        Id("y").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
-    }
-    //for win
-    if(computerimage == "images/Paper-icon.png")
-    {
-        changeResult("YOU WIN ");
-        changeScore(score+1);
-        Id("x").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
-    }
-}
-//Change the  score
-function changeScore(valueofscore){
-    Id("score").textContent = valueofscore
-}
-//Change the result
-function changeResult(text){
-    result.innerText = text;
-}
-//Raghad khatatba
+    //Raghad khatatba
     //show the random img
     let coputerimage = () => {
         let images = ["images/Paper-icon.png", "images/Scissor-icon.png", "images/Rock-icon.png"];
@@ -146,6 +137,7 @@ function changeResult(text){
         biggercontainer.style.display = "flex";
         //Hide the prev botton
         Prev.style.display = "none";
+        soundbutton.style.display = "none";
     }
     //return to the main page
     let play_again = () => {
@@ -155,8 +147,42 @@ function changeResult(text){
         biggercontainer.style.display = "none";
         //show the prev botton
         Prev.style.display = "block";
-        Id("x").style.boxShadow ="";
-        Id("y").style.boxShadow ="";
+        Id("Effect1").style.boxShadow = "";
+        Id("Effect2").style.boxShadow = "";
+        soundbutton.style.display = "flex";
+    }
+    /**
+* Music Button 
+* Ahmad Amer
+*/
+    var music = new Audio();
+    let soundbutton = qs("#Play");
+    var Play = document.getElementById("Play");
+    music.src = 'music.mp3';
+    music.loop = true;
+    Play.addEventListener('click', fplay);
+    function fplay() {
+        soundbutton.classList.toggle("soundbutton2");
+        if (music.paused) {
+            music.play();
+        }
+        else {
+            music.pause();
+        }
+    }
+    /*
+    show Effects on the winning photo
+    Raghad Khatatba
+*/
+    let Effect1 = ()=>{
+        Id("Effect1").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
+        Id("Effect1").style.zIndex="-1";
+        Id("Effect2").style.zIndex="1";
+    }
+    let Effect2 = ()=>{
+        Id("Effect2").style.boxShadow ="0 0 0 40px #293251 , 0 0 0 80px #232C4B , 0 0 0 130px #1E2949";
+        Id("Effect2").style.zIndex="-1";
+        Id("Effect1").style.zIndex="1";
     }
     /**
       * Returns the element that has the ID attribute with the specified value.

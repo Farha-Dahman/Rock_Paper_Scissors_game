@@ -718,10 +718,38 @@ transform: translate3d(0px,-4px,0px);
 }
 }
 
-#x,#y{
+#Effect1,#Effect2{
   border: none;
   border-radius:50% ;
   @media(width:200px);
   @media(height:200px);
-  z-index: -1;
+}
+
+.soundbutton{
+    background-image: url("images/sound2.jpg");
+    background-position: center;
+    height: 90px;
+    width: 90px;
+    background-size: cover;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 9px rgb(39, 2, 63);
+    position: absolute;
+    right:    20px;
+    bottom:   22px;
+}
+.soundbutton2{
+    background-image: url("images/sound.jpg");
+    background-position: center;
+    height: 90px;
+    width: 90px;
+    background-size: cover;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 9px rgb(39, 2, 63);
+    position: absolute;
+    right:    20px;
+    bottom:   22px;
 }
